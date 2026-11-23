@@ -11,7 +11,33 @@ package coffeeshop;
 // Commit message when it is all green:  step 1: MenuItem
 
 public class MenuItem {
+    private String name;
+    private double price;
 
-    // YOUR CODE
+    // Initializes the name and price of the item.
+    public MenuItem(String name, double price) {
+        this.name = name;
+        this.price = price;
+    }
 
+    // Returns the item's name.
+    public String getName() {
+        return name;
+    }
+
+    // Returns the item's price.
+    public double getPrice() {
+        return price;
+    }
+
+    // Checks whether the item is a drink.
+    public boolean isDrink() {
+        return false;
+    }
+
+    // Displays the item's name and formatted price.
+    @Override
+    public String toString() {
+        return name + " - $" + String.format("%.2f", getPrice());
+    }
 }
